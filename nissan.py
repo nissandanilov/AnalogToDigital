@@ -38,11 +38,3 @@ class AnalogToDigital():
           plt.legend()
           plt.show()
 
-a2d = AnalogToDigital("C:\\Users\\nissa\Desktop\\X-trodes\\NEUR0000.DT8")
-a2d.load_data()
-a2d.df_convert()
-
-a2d.apply_band_pass_filter_and_plot(low_f=100, high_f=500)
-
-a2d.apply_band_pass_filter_and_plot(low_f=10, high_f=1500)
-
