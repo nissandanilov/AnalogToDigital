@@ -24,7 +24,7 @@ class AnalogToDigital():
         N = len(self.df)  # number of samples
         T = 1.0 / Fs  # Time interval
 
-        FILTER_ORDER = 3
+        FILTER_ORDER = 5
 
         for ch_idx in self.df.columns:
           y = np.array(self.df[ch_idx])
@@ -45,3 +45,8 @@ class AnalogToDigital():
           plt.show()
 
 
+#   Example
+# A2D = AnalogToDigital('file_path')
+# A2D.load_data()
+# A2D.df_convert()
+# A2D.apply_band_pass_filter_and_plot(250,500)
